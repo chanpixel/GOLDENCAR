@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Cars - Professional Car Repair Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .contact-form input, .contact-form textarea {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-car-side text-yellow-500 text-2xl mr-2"></i>
+                <a href="#" class="text-xl font-bold">Golden Cars</a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+                <a href="#services" class="hover:text-yellow-400 transition">Services</a>
+                <a href="#about" class="hover:text-yellow-400 transition">About</a>
+                <a href="#testimonials" class="hover:text-yellow-400 transition">Testimonials</a>
+                <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 py-2">
+            <a href="#home" class="block py-2 hover:text-yellow-400 transition">Home</a>
+            <a href="#services" class="block py-2 hover:text-yellow-400 transition">Services</a>
+            <a href="#about" class="block py-2 hover:text-yellow-400 transition">About</a>
+            <a href="#testimonials" class="block py-2 hover:text-yellow-400 transition">Testimonials</a>
+            <a href="#contact" class="block py-2 hover:text-yellow-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-white py-20 md:py-32 flex items-center">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Your Car Deserves Golden Care</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Welcome to Golden Cars! With over 20 years of professional auto repair experience, we service all makes and models. Reliable, fast, and high-quality service for every journey you take.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">Book Appointment</a>
+                <a href="#services" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <div class="w-20 h-1 bg-yellow-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer comprehensive auto repair services to keep your vehicle running smoothly and safely.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="figureoutcarmaintenance.jpg" alt="General Maintenance" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">General Maintenance</h3>
+                        <p class="text-gray-600 mb-4">Regular check-ups to prevent major issues and extend your vehicle's lifespan.</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Oil Changes</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Filter Replacements</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Fluid Checks</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="download.jpeg" alt="Brake Services" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Brake Services</h3>
+                        <p class="text-gray-600 mb-4">Complete brake inspection and repair to ensure your safety on the road.</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Brake Pad Replacement</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Rotor Resurfacing</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Brake Fluid Flush</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="download (1).jpeg" alt="Electrical Systems" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Electrical Systems</h3>
+                        <p class="text-gray-600 mb-4">Diagnosis and repair of all electrical components in your vehicle.</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Battery Testing</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Alternator Repair</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Wiring Issues</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="images (1).jpeg" alt="Tire Services" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Tire Services</h3>
+                        <p class="text-gray-600 mb-4">Complete tire services to keep you rolling safely in all conditions.</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Tire Rotation</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Wheel Alignment</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Flat Repair</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="images (2).jpeg" alt="Engine Repair" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Engine Repair</h3>
+                        <p class="text-gray-600 mb-4">Expert diagnosis and repair of all engine-related issues.</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Engine Diagnostics</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Timing Belt Replacement</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Overheating Issues</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="images (3).jpeg" alt="AC Services" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">AC Services</h3>
+                        <p class="text-gray-600 mb-4">Keep your cool with our professional air conditioning services.</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> AC Recharge</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Compressor Repair</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Leak Detection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+                    <img src="pngtree-golden-car-logo-sign-luxury-repair-sport-vector-png-image_47459442.jpg" alt="Golden Cars Team" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Golden Cars</h2>
+                    <div class="w-20 h-1 bg-yellow-600 mb-6"></div>
+                    <p class="text-gray-600 mb-6">Founded in 2003, Golden Cars has been serving the community with top-quality auto repair services for over 20 years. Our team of ASE-certified technicians is committed to providing honest, reliable service you can trust.</p>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Our Mission</h3>
+                        <p class="text-gray-600">To provide exceptional automotive repair services with integrity, transparency, and a commitment to customer satisfaction.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-award text-yellow-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Certified Technicians</h4>
+                                <p class="text-gray-600">All our mechanics are ASE-certified with years of experience.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-shield-alt text-yellow-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Warranty Protected</h4>
+                                <p class="text-gray-600">All repairs come with a 12-month/12,000-mile warranty.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-yellow-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Quick Service</h4>
+                                <p class="text-gray-600">Most repairs completed within 24 hours.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-peso-sign text-yellow-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Fair Pricing</h4>
+                                <p class="text-gray-600">Competitive rates with no hidden fees.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+                <div class="w-20 h-1 bg-yellow-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Don't just take our word for it - hear from our satisfied customers.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-100 p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Golden Cars saved me hundreds of dollars by accurately diagnosing my car's issue when another shop wanted to replace the entire transmission. Honest and professional service!"</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-300 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michael Johnson</h4>
+                            <p class="text-gray-600">Customer since 2018</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-100 p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"I've been taking my cars to Golden Cars for years. They always explain what needs to be done and why, without pressuring me into unnecessary repairs."</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-300 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah Williams</h4>
+                            <p class="text-gray-600">Customer since 2015</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-100 p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Quick service, fair prices, and friendly staff. My car was ready the same day, and they even washed it! Will definitely be coming back for all my auto needs."</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-300 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">David Rodriguez</h4>
+                            <p class="text-gray-600">Customer since 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-yellow-600 mx-auto mb-4"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto">Schedule an appointment or ask us any questions. Our team is ready to assist you.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="contact-form space-y-6" action="https://formsubmit.co/your-email@gmail.com" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone" class="block mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500" placeholder="(123) 456-7890">
+                        </div>
+                        <div>
+                            <label for="service" class="block mb-2">Service Needed</label>
+                            <select id="service" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500">
+                                <option value="">Select a service</option>
+                                <option value="maintenance">General Maintenance</option>
+                                <option value="brakes">Brake Services</option>
+                                <option value="electrical">Electrical Systems</option>
+                                <option value="tires">Tire Services</option>
+                                <option value="engine">Engine Repair</option>
+                                <option value="ac">AC Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500" placeholder="Tell us about your vehicle's issue..." required></textarea>
+                        </div>
+                        <!-- FormSubmit configuration -->
+                        <input type="hidden" name="_subject" value="New Contact from Golden Cars Website">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_cc" value="owner-phone@carrier-gateway.com">
+                        
+                        <button type="submit" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800 p-8 rounded-lg h-full">
+                        <h3 class="text-2xl font-bold mb-6">Visit Our Shop</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-yellow-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Location</h4>
+                                    <p class="text-gray-300">Cagayan de Oro National Highway,<br>St. Francis Street, NHA Subdivision,<br>Barangay Kauswagan, Cagayan De Oro City, 9000 Misamis Oriental</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-yellow-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Business Hours</h4>
+                                    <p class="text-gray-300">
+                                        Monday - Friday: 7:30 AM - 6:00 PM<br>
+                                        Saturday: 8:00 AM - 4:00 PM<br>
+                                        Sunday: Closed
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-yellow-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Contact Info</h4>
+                                    <p class="text-gray-300">
+                                        Phone: 0995 437 4073<br>
+
+                                        Email: goldencarservicecenter@gmail.com<br>
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-gray-700 hover:bg-yellow-600 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-yellow-400 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-yellow-500 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-red-600 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 bg-gray-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.071102360196!2d124.6303914!3d8.4969709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff31a87d158a5%3A0x134fa0e81143b2cc!2sGolden%20Cars%20Service%20Center!5e0!3m2!1sen!2sph!4v1710000000000!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fas fa-car-side text-yellow-500 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold">Golden Cars</span>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    &copy; 2023 Golden Cars. All rights reserved.
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-yellow-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src = "script.js"></script>
+</body>
+</html>
